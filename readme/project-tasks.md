@@ -83,7 +83,7 @@ BLT allows you to define a custom command that will be run to compile your proje
 target-hooks:
   frontend-build:
     # The directory in which the command will be executed.
-    dir: ${repo.root}/docroot
+    dir: ${docroot}
     command: npm install.
 ```
 

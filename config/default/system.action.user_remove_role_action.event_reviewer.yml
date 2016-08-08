@@ -1,0 +1,14 @@
+uuid: 4ae06610-97aa-4890-8526-25c3155d26aa
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.event_reviewer
+  module:
+    - user
+id: user_remove_role_action.event_reviewer
+label: 'Remove the Event Reviewer role from the selected users'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: event_reviewer

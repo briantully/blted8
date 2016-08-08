@@ -1,0 +1,20 @@
+uuid: 9920ff86-6544-4f96-acfe-62850e029e1e
+langcode: en
+status: true
+dependencies:
+  config:
+    - media_entity.bundle.image
+id: media.image.status
+field_name: status
+entity_type: media
+bundle: image
+label: 'Publishing status'
+description: 'A boolean indicating whether the media is published.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

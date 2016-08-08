@@ -1,0 +1,32 @@
+uuid: 46ccbdd5-fcdd-4a59-bfda-c3b9d6353101
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.teaser
+    - field.field.block_content.teaser.body
+    - field.field.block_content.teaser.field_teaser_image
+  module:
+    - image
+    - text
+id: block_content.teaser.default
+targetEntityType: block_content
+bundle: teaser
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+  field_teaser_image:
+    weight: 1
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+hidden:
+  langcode: true

@@ -1,0 +1,8 @@
+uuid: 73792338-712e-4da5-a63f-fe1e905b77ee
+langcode: en
+status: true
+dependencies: {  }
+id: teaser
+label: Teaser
+revision: 1
+description: 'Teaser block'

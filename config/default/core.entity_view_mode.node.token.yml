@@ -1,0 +1,10 @@
+uuid: dada4480-f3b6-4792-a6a5-cc642b27ea58
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.token
+label: Token
+targetEntityType: node
+cache: true

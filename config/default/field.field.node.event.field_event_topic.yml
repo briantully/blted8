@@ -1,0 +1,28 @@
+uuid: 64168b3f-a340-44c7-aa70-d76ba393077c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_event_topic
+    - node.type.event
+    - taxonomy.vocabulary.event_topic
+id: node.event.field_event_topic
+field_name: field_event_topic
+entity_type: node
+bundle: event
+label: 'Event topic'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      event_topic: event_topic
+    sort:
+      field: _none
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

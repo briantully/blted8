@@ -1,0 +1,14 @@
+uuid: c3a87094-aa43-495b-9577-82be4d4b3653
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.location_creator
+  module:
+    - user
+id: user_add_role_action.location_creator
+label: 'Add the Location Creator role to the selected users'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: location_creator

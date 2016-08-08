@@ -1,0 +1,15 @@
+uuid: 3045ce16-caf5-428d-abce-ce5eea3ea88b
+langcode: en
+status: true
+dependencies: {  }
+id: location_reviewer
+label: 'Location Reviewer'
+weight: 10
+is_admin: null
+permissions:
+  - 'edit any location content'
+  - 'delete any location content'
+  - 'use draft_published transition'
+  - 'use needs_review_draft transition'
+  - 'use needs_review_published transition'
+  - 'use published_published transition'

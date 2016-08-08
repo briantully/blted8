@@ -246,6 +246,8 @@ $databases = array();
  */
 $config_directories = array();
 
+$config_directories[CONFIG_SYNC_DIRECTORY] = '../config/default';
+
 /**
  * Settings:
  *

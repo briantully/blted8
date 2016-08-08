@@ -1,0 +1,9 @@
+uuid: 6bd018b5-0a56-4d16-84ca-2bb39db0a98f
+langcode: en
+status: true
+dependencies: {  }
+name: 'Event topic'
+vid: event_topic
+description: ''
+hierarchy: 0
+weight: 0

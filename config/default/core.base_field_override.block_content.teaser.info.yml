@@ -1,0 +1,18 @@
+uuid: d5c77b42-f44f-4046-865c-a690d4de1ef9
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.teaser
+id: block_content.teaser.info
+field_name: info
+entity_type: block_content
+bundle: teaser
+label: 'Block description'
+description: 'A brief description of your block.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,14 @@
+uuid: bdf12d52-3268-43ee-be9e-a91f3d5b4858
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.location_creator
+  module:
+    - user
+id: user_remove_role_action.location_creator
+label: 'Remove the Location Creator role from the selected users'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: location_creator

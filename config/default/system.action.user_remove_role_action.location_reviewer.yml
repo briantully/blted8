@@ -1,0 +1,14 @@
+uuid: 3a0a5fa7-8d26-4039-b89f-0830cc2dd8ae
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.location_reviewer
+  module:
+    - user
+id: user_remove_role_action.location_reviewer
+label: 'Remove the Location Reviewer role from the selected users'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: location_reviewer

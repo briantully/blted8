@@ -28,7 +28,7 @@ git:
   default_branch: master
   remotes:
     # Defining git remotes allows builds deployed via CI.
-    - bolt8@svn-5223.devcloud.hosting.acquia.com:bolt8.git
+    - bltd8@svn-3516.devcloud.hosting.acquia.com:bltd8.git
 
 drush:
   # You can set custom project aliases in drush/site-aliases/aliases.drushrc.php.
@@ -64,4 +64,4 @@ target-hooks:
 # Hosting environment flags.
 # Examples: acsf (Acquia Cloud Site Factory), ac (Acquia Cloud)
 # hosting: "acsf"
-# hosting: "ac"
+hosting: "ac"

@@ -1,0 +1,5 @@
+label: 'Estado de publicación'
+description: 'Un booleano que indica si el nodo está publicado.'
+settings:
+  on_label: 'On'
+  off_label: 'Off'

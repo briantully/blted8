@@ -1,0 +1,20 @@
+uuid: 3161ad43-8086-4bb7-a219-23258bf7dd8d
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.event_topic
+  module:
+    - text
+id: taxonomy_term.event_topic.description
+field_name: description
+entity_type: taxonomy_term
+bundle: event_topic
+label: Description
+description: 'A description of the term.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

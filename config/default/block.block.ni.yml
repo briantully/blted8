@@ -26,6 +26,7 @@ settings:
 visibility:
   request_path:
     id: request_path
+    bundles:
     pages: '*'
     negate: false
     context_mapping: {  }

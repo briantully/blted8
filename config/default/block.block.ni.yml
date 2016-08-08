@@ -6,7 +6,7 @@ dependencies:
     - 'block_content:teaser:c77e6bc0-9e72-464f-9018-677295b284c7'
   module:
     - block_content
-    - ctools
+    - system
   theme:
     - bartik
 id: ni
@@ -24,9 +24,8 @@ settings:
   info: ''
   view_mode: full
 visibility:
-  'entity_bundle:block_content':
-    id: 'entity_bundle:block_content'
-    bundles:
-      teaser: teaser
+  request_path:
+    id: request_path
+    pages: '*'
     negate: false
     context_mapping: {  }

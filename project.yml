@@ -1,67 +1,52 @@
 project:
-  # The project's composer.json will be updated with the below vendor_name and description
-  # and should be updated directly to change these values after initial creation.
-  vendor_name: 'acquia'
-  description: 'A short description of the package. Usually this is just one line long.'
-  # Everyone: This will determine the the directory name of the new repository.
-  # Dev Desktop users: this should match your local site name.
-  machine_name: 'blted8'
-  # Used for enforcing correct git commit msg syntax.
-  prefix: 'BLT'
-  human_name: 'BLTed 8'
-  profile:
-    name: 'lightning'
-    # Please ensure contrib profiles are also in your composer.json file.
-    contrib: true
-  # This is used to build front end artifacts. E.g., SASS compilation.
-  themes:
-    - thunder
-  # These are random strings used to configure the hash salt.
-  hash_salt: N4CQZim0LU7GgWuyqyq7ZA96Mrh2Cdef7Z1opmwqkEr55O4YigPbZuD
-  # This will be used as the local uri for all developers.
-  local:
-    protocol: http
-    hostname: blted8.localhost
-
-# Configuration settings for new git repository.
+    machine_name: blted8
+    prefix: BLT
+    human_name: 'BLTed 8'
+    profile:
+        name: lightning
+        contrib: true
+    local:
+        protocol: http
+        hostname: blted8.localhost
+    vendor_name: acquia
+    description: 'A short description of the package. Usually this is just one line long.'
+    themes:
+        - thunder
+    hash_salt: N4CQZim0LU7GgWuyqyq7ZA96Mrh2Cdef7Z1opmwqkEr55O4YigPbZuD
 git:
-  default_branch: master
-  remotes:
-    # Defining git remotes allows builds deployed via CI.
-    - bltd8@svn-3516.devcloud.hosting.acquia.com:bltd8.git
-
+    default_branch: master
+    remotes:
+        - 'bltd8@svn-3516.devcloud.hosting.acquia.com:bltd8.git'
 drush:
-  # You can set custom project aliases in drush/site-aliases/aliases.drushrc.php.
-  aliases:
-    # The remote environment from which the database will be pulled.
-    remote: blted8.test
-    # The local environment against which all local drush commands are run.
-    local: self
-    # The drush alias against which all ci commands are run.
-    ci: self
-    # The default drush alias to be used when no environment is specified.
-  default_alias: self
-
-# Custom tasks that are triggered at pre-defined times in the build process.
-# The tasks hook into BLT's existing Phing targets. Available hooks keys are:
-# frontend-build, post-deploy-build, and post-setup-build.
+    aliases:
+        remote: blted8.test
+        local: self
+        ci: self
+    default_alias: self
 target-hooks:
-  # Executed when front end assets should be generated.
-  frontend-build:
-    # E.g., ${repo.root}/docroot/sites/all/themes/custom/mytheme.
-    dir: ${repo.root}/docroot
-    # E.g., `npm install` or `bower install`.
-    command: echo 'No frontend build configured.'
-  # Executed after deployment artifact is created.
-  post-deploy-build:
-    dir: ${repo.root}/deploy/docroot/profiles/contrib/lightning
-    command: npm install && bower install
-  # Executed after setup:build is run.
-  post-setup-build:
-    dir: ${repo.root}/docroot/profiles/contrib/lightning
-    command: npm run install-libraries
+    frontend-setup:
+        dir: '${docroot}'
+        command: 'echo ''No frontend-setup configured.'''
+    frontend-build:
+        dir: '${repo.root}/docroot'
+        command: 'echo ''No frontend build configured.'''
+    post-deploy-build:
+        dir: '${repo.root}/deploy/docroot/profiles/contrib/lightning'
+        command: 'npm install && bower install'
+    post-setup-build:
+        dir: '${repo.root}/docroot/profiles/contrib/lightning'
+        command: 'npm run install-libraries'
+import: null
+modules:
+    ci:
+        enable: {  }
+        uninstall: [acquia_connector, shield]
+    deploy:
+        enable: [acquia_connector, shield]
+        uninstall: [devel, field_ui, views_ui]
+    local:
+        enable: [dblog, devel, field_ui, seckit, views_ui]
+        uninstall: [acsf, acquia_connector, dblog, shield]
+hosting: ac
+example.property: 'example value'
 
-# Hosting environment flags.
-# Examples: acsf (Acquia Cloud Site Factory), ac (Acquia Cloud)
-# hosting: "acsf"
-hosting: "ac"

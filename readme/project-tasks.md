@@ -83,7 +83,7 @@ BLT allows you to define a custom command that will be run to compile your proje
 target-hooks:
   frontend-build:
     # The directory in which the command will be executed.
-    dir: ${docroot}
+    dir: /Users/brian.tully/Sites/blted8/docroot
     command: npm install.
 ```
 
@@ -93,7 +93,7 @@ If you need to run more than one command, you may use this feature to call a cus
 target-hooks:
   frontend-build:
     # The directory in which the command will be executed.
-    dir: ${repo.root}
+    dir: /Users/brian.tully/Sites/blted8
     command: ./scripts/custom/my-script.sh
 ```
 

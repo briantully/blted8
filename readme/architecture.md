@@ -1,4 +1,4 @@
-${project.human_name}
+BLTed 8
 
 Drupal Architecture
 ========================
